@@ -124,4 +124,6 @@ class ResnetBuilder(object):
         model = Model(inputs=input, outputs=dense)
         
         return model
+    def build_resnet_34(input_shape, num_outputs):
+        return ResnetBuilder.build(input_shape, num_outputs, basic_block, [3, 4, 6, 3])
         

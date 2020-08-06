@@ -38,7 +38,7 @@ X_test -= mean_image
 X_train /= 128.
 X_test /= 128.
 
-model = Resnet.ResnetBuilder.build((img_channels, img_rows, img_cols), nb_classes)
+model = Resnet.ResnetBuilder.build_resnet_34((img_channels, img_rows, img_cols), nb_classes)
 model.compile(loss='categorical_crossentropy',
               optimizer='adam',
               metrics=['accuracy'])
